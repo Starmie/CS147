@@ -28,8 +28,73 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
+
+	JUJJJJJJJJJJJJJJJJJHHHHHHHHHHHHHHHHAAAAAAAAAAAAAR
 	
-	<p>The form should go here</p>
+	<div id="fb-root"></div>
+  <script>
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+          }());
+  </script>
+  
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({ appId: '296344457137837', 
+      status: true, 
+      cookie: true,
+      xfbml: true,
+      oauth: true});
+ 
+      FB.Event.subscribe('auth.statusChange', handleStatusChange);	
+    };
+  </script>
+  
+  <script>
+   function handleStatusChange(response) {
+     document.body.className = response.authResponse ? 'connected' : 'not_connected';
+    
+     if (response.authResponse) {
+       console.log(response);
+       updateUserInfo(response);
+     }
+   }
+   </script>
+   
+   <div id="login">
+     <p><button onClick="loginUser();">Login</button></p>
+   </div>
+   <div id="logout">
+     <div id="user-info"></div>
+     <p><button  onClick="FB.logout();">Logout</button></p>
+   </div>
+   
+  <script>
+    function loginUser() {    
+      FB.login(function(response) { }, {scope:'email'});  	
+    }
+  </script>
+  
+  <style>
+    body.connected #login { display: none; }
+    body.connected #logout { display: block; }
+    body.not_connected #login { display: block; }
+    body.not_connected #logout { display: none; }
+  </style>
+  
+  <div id="user-info"></div>
+  <script>
+    function updateUserInfo(response) {
+      FB.api('/me', function(response) {
+        document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + response.name;
+      });
+    }
+  </script>
+
+
+<script src="https://gist.github.com/3937498.js?file=index.php"></script>
 		<div data-role="fieldcontain">
 			
 		</div>	

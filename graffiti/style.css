@@ -1,0 +1,108 @@
+#tabs {
+	text-align: center;
+	padding-top: 0px;
+	/*position: fixed;*/
+	top: 90%;
+	left: 25%;
+}
+
+#home {
+	text-align: center;
+}
+
+#user_post {
+	font-weight: bold;
+}
+
+#content {
+}
+
+.message {
+	
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+.details {
+	text-align: left;
+	margin: 5px;
+	font-size: 70%;
+}
+
+.entry {
+	border-radius: 7px;
+	border: 2px solid transparent;
+	margin: 5px;
+	background-color: rgb(252, 237, 158);
+	color: black;
+}
+
+.thumbnail {
+	padding-top: 5px;
+	padding-left: 5px;
+	width: 265px;
+}
+
+a {
+	color: white;
+}
+
+.messageinput {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+.errorMessage {
+	display: none;
+}
+
+#progress_info {
+    font-size:10pt;
+}
+
+#progress {
+    border:1px solid #ccc;
+    display:none;
+    float:left;
+    height:14px;
+
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+
+    background: -moz-linear-gradient(#66cc00, #4b9500);
+    background: -ms-linear-gradient(#66cc00, #4b9500);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66cc00), color-stop(100%, #4b9500));
+    background: -webkit-linear-gradient(#66cc00, #4b9500);
+    background: -o-linear-gradient(#66cc00, #4b9500);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc00', endColorstr='#4b9500');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc00', endColorstr='#4b9500')";
+    background: linear-gradient(#66cc00, #4b9500);
+}
+#progress_percent {
+    float:right;
+}
+
+#history {
+	text-align: center;
+}
+
+#sorting {
+	text-align: center;
+}
+
+#nearest {
+	text-align: left;
+	padding: 10px;
+}
+#popular {
+	text-align: center;
+	padding: 10px;
+}
+#newest {
+	text-align: right;
+	padding: 10px;
+}
