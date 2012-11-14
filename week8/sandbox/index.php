@@ -1,3 +1,12 @@
+<?php
+include 'Mobile_Detect.php';
+$detect = new Mobile_Detect();
+
+if (!$detect->isMobile()) {
+	header("Location: mobiletest/iphone.php?url=stanford.edu/~tpels/cgi-bin/week8/sandbox/mobile.php");
+}
+?>
+
 <!DOCTYPE html> 
 <html>
 
